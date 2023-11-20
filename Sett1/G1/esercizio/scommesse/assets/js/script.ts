@@ -27,7 +27,7 @@ function verifica(): void {
 	confronto(numero1, numero2);
 }
 
-const generazione = () => {
+const generazione = (): void => {
 	estratto = Math.floor(Math.random() * 100 + 1);
 	document.querySelector(
 		'#estratto'
@@ -57,7 +57,7 @@ function confronto(valore1: number, valore2: number): void {
 	}
 }
 
-const cancella = () => {
+const cancella = (): void => {
     risultato!.innerHTML = '';
     document.querySelector('#estratto')!.innerHTML = '';
     giocatore1.value = '';

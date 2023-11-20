@@ -11,10 +11,10 @@
 
     <fieldset>
         <label for="giocatore1">Giocatore 1</label>
-        <input type="number" id="giocatore1">
+        <input type="number" id="giocatore1" min="1" max="100" required>
         <p>&nbsp;</p>
         <label for="giocatore2">Giocatore 2</label>
-        <input type="number" id="giocatore2">
+        <input type="number" id="giocatore2" min="1" max="100" required>
         <p>&nbsp;</p>
         <button type="button" id="verifica">VERIFICA</button>
         <button type="button" id="cancella">CANCELLA</button>
@@ -26,6 +26,8 @@
     <h2 id="estratto"></h2>
     <h2>RISULTATO</h2>
     <h2 id="risultato"></h2>
+
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>

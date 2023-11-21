@@ -1,6 +1,6 @@
 var btnVerifica = document.getElementById('verifica');
 var btnReset = document.getElementById('cancella');
-var risultato = document.getElementById('risultato');
+var risultato = document.getElementById('risultatoFinale');
 var estratto;
 var giocatore1 = document.getElementById('giocatore1');
 var giocatore2 = document.getElementById('giocatore2');

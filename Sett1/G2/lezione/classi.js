@@ -23,7 +23,7 @@ var Studente = /** @class */ (function () {
         return "".concat(this.nome, " ").concat(this.cognome, " di anni ").concat(this.eta);
     };
     Studente.prototype.anno = function () {
-        var annoCorrente = new Date().getFullYear();
+        var annoCorrente = new Date().getFullYear(); // Typescript deriva il tipo della variabile dal valore che le viene assegnato
         return annoCorrente;
     };
     Studente.stato = function () {
@@ -32,9 +32,11 @@ var Studente = /** @class */ (function () {
     return Studente;
 }());
 var newStudente1 = new Studente('Mario', 'Rossi', 25);
+console.log(newStudente1);
 console.log(newStudente1.getStudente(), 'nato nel', (newStudente1.anno() - newStudente1.eta), ", residente in ".concat(Studente.stato()));
 var newStudente2 = new Studente('Aldo', 'Bianchi', 22);
 console.log(newStudente2.getStudente(), 'nato nel', (newStudente2.anno() - newStudente2.eta));
+// Sottoclasse della superclasse Studente
 var Docente = /** @class */ (function (_super) {
     __extends(Docente, _super);
     function Docente(_nome, _cognome, _eta, _materie) {

@@ -13,7 +13,7 @@ class Studente {
     }
 
     anno(): number {
-        let annoCorrente = new Date().getFullYear();
+        let annoCorrente = new Date().getFullYear(); // Typescript deriva il tipo della variabile dal valore che le viene assegnato
         return annoCorrente;
     }
 
@@ -23,11 +23,14 @@ class Studente {
 }
 
 let newStudente1 = new Studente('Mario', 'Rossi', 25)
+console.log(newStudente1);
+
 console.log(newStudente1.getStudente(), 'nato nel', (newStudente1.anno() - newStudente1.eta),`, residente in ${Studente.stato()}`);
 
 let newStudente2 = new Studente('Aldo', 'Bianchi', 22);
 console.log(newStudente2.getStudente(), 'nato nel', (newStudente2.anno() - newStudente2.eta));
 
+// Sottoclasse della superclasse Studente
 class Docente extends Studente { // ereditarietà
     materie: string[];
     constructor(_nome: string, _cognome: string, _eta: number, _materie: string[]) {

@@ -11,11 +11,9 @@ let disponibile = document.querySelector('#disponibile') as HTMLInputElement;
 let saldo = document.querySelector('#saldo') as HTMLInputElement;
 let inserisci = document.querySelector('#inserisci') as HTMLButtonElement;
 
-let idNuovo: number = 0;
 const Url = 'https://61fb890c87801d0017a2c55c.mockapi.io/v1/metadata';
 
 class Capo {
-	id: number;
 	codprod: number;
 	collezione: string;
 	capo: string;
@@ -28,7 +26,6 @@ class Capo {
 	saldo: number;
 
 	constructor(
-		_id: number,
 		_codprod: number,
 		_collezione: string,
 		_capo: string,
@@ -40,7 +37,6 @@ class Capo {
 		_disponibile: string,
 		_saldo: number
 	) {
-		this.id = _id;
 		this.codprod = _codprod;
 		this.collezione = _collezione;
 		this.capo = _capo;
@@ -70,12 +66,8 @@ async function fetchAPI() {
 }
 
 function stampaCapi(capi: any[]) {
-    let ultimo = capi.length - 1;    
-    idNuovo = Number(capi[ultimo].id);
-    idNuovo++;
-	capi.forEach(element => {
+    capi.forEach(element => {
 		let capoSingolo = new Capo(
-			element.id,
 			element.codprod,
 			element.collezione,
 			element.capo,
@@ -96,7 +88,6 @@ fetchAPI();
 
 inserisci.addEventListener('click', function () {
 	let nuovoCapo = new Capo(
-		Number(idNuovo),
 		Number(codice.value),
 		collezione.value,
 		capo.value,

@@ -90,6 +90,7 @@ function fetchAPI() {
 }
 function stampaCapi(capi) {
     var ultimo = capi.length - 1;
+    console.log(typeof (capi[ultimo].id));
     idNuovo = Number(capi[ultimo].id) + 1;
     capi.forEach(function (element) {
         var capoSingolo = new Capo(element.id, element.codprod, element.collezione, element.capo, element.modello, element.quantita, element.colore, element.prezzoIvaEsclusa, element.prezzoIvaInclusa, element.disponibile, element.saldo);

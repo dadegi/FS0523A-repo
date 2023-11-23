@@ -70,8 +70,9 @@ async function fetchAPI() {
 }
 
 function stampaCapi(capi: any[]) {
-    let ultimo = capi.length - 1;
-    idNuovo = Number(capi[ultimo].id) + 1;
+    let ultimo = capi.length - 1;    
+    idNuovo = Number(capi[ultimo].id);
+    idNuovo++;
 	capi.forEach(element => {
 		let capoSingolo = new Capo(
 			element.id,

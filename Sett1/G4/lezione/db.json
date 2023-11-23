@@ -1,0 +1,28 @@
+{
+	"studenti": [
+		{
+			"nome": "Alessia",
+			"cognome": "Palmieri"
+		},
+		{
+			"nome": "Caterina",
+			"cognome": "Crisci"
+		},
+		{
+			"nome": "Fabrizio",
+			"cognome": "Pignatelli"
+		}
+	],
+    "docenti": [
+        {
+            "nome": "Stefano",
+            "cognome": "Miceli",
+            "materie": ["html", "css", "Sass", "Bootstrap", "Javascript"]
+        },
+        {
+            "nome": "Dario",
+            "cognome": "Del Giudice",
+            "materie": ["Typescript", "Angular"]
+        }        
+    ]
+}

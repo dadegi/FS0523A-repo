@@ -1,12 +1,4 @@
-# Lezione
-
-# Codice lezione UNIT 3 settimana 2 giorno 1
-
-Questo è il progetto Angular della prima lezione della settimana 2.
-ATTENZIONE!
-È stato utilizzato bootstrap, per implementarlo:
-1. lanciare da terminale VSCode: npm i bootstrap
-2. inserire nel file styles.scss la seguente riga: @import '~boostrap/scss/bootstrap';
+# Esercizio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 

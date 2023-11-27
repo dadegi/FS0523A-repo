@@ -1,5 +1,9 @@
 # Lezione
 
+# Codice lezione UNIT 3 settimana 2 giorno 1
+
+Questo è il progetto Angular della prima lezione della settimana 2
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
 ## Development server

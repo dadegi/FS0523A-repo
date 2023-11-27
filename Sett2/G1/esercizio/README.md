@@ -1,5 +1,12 @@
 # Esercizio
 
+Esercizio UNIT 3 settimana 2 giorno 1
+
+## Questo codice utilizza Bootstrap
+Per implementare Bootstrap nel progetto:
+1. installare Bootstrap nei node modules: npm i bootstrap
+2. aggiungere a styles.scss la riga: @import '~bootstrap/scss/bootstrap';
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
 ## Development server

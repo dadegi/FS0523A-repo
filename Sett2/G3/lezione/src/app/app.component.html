@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Lista utenti (parent-child)</h1>
+    <app-card>
+        <h5 class="card-title">Titolo card</h5>
+        <div class="card-body">
+            <app-user-info [user]="pippo" *ngFor="let pippo of users"></app-user-info>
+        </div>
+    </app-card>
+</div>

@@ -58,9 +58,7 @@ export class PostsService {
 
     recuperaPost(id: number) {
         let postSingolo: Post | undefined = this.posts.find((post) => post.id == id);
-        console.log(postSingolo);
         return postSingolo;
-        // return this.posts.find((post) => post.id == id);
     }
 
     updatePost(data: Partial<Post>, id: number) {

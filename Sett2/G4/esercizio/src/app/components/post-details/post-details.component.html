@@ -1,0 +1,14 @@
+<div class="container">
+    <ng-container *ngIf="post; else nonTrovato">
+        <h1 class="text-center m-4" *ngIf="post.active; else inattivo">POST ATTIVO: {{post.title}}</h1>
+        <p>{{post.body}}</p>
+        <p>Categoria: {{post.type}}</p>
+        <p>Autore: {{post.author}}</p>
+    </ng-container>
+</div>
+<ng-template #inattivo>
+    <h1 class="text-center m-4">POST NON ATTIVO: {{post?.title}}</h1>
+</ng-template>
+<ng-template #nonTrovato>
+    <h1 class="text-center m-4">Post non trovato!</h1>
+</ng-template>

@@ -1,0 +1,9 @@
+<div class="container m-3">
+    <ul class="list-group">
+        <li *ngFor="let user of users" class="list-group-item"
+            [routerLink]="[user.id]" routerLinkActive="active">{{user.nome}}
+        </li>
+    </ul>
+    <hr>
+    <router-outlet></router-outlet>
+</div>

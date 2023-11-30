@@ -15,12 +15,10 @@ export class InactivePostsComponent implements OnInit {
     async ngOnInit() {
         const posts = await this.postSrv.recuperaPosts();
         this.posts = posts;
-        console.log(this.posts);
     }
 
     onActivePost(id: number, i: number) {
         this.postSrv.updatePost({active: true}, id);
         this.posts.splice(i, 1);
-        console.log(this.posts);
     }
 }

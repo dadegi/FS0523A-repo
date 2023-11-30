@@ -45,12 +45,14 @@ export class PostsService {
 
     constructor() {}
 
+    postLocali!: Post[];
+
     recuperaPosts() {
         return this.posts;
     }
 
     updatePost(data: Partial<Post>, id: number) {
-        let posts = this.posts.map(post => post.id == id ? {...post, ...data} : post);
-        return posts.find(post => post.id == id) as Post;
+        this.posts = this.posts.map(post => post.id == id ? {...post, ...data} : post);
+        return this.posts.find(post => post.id == id) as Post;
     }
 }

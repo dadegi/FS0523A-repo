@@ -9,7 +9,7 @@ import { PrimoComponent } from './components/primo/primo.component';
 import { SecondoComponent } from './components/secondo/secondo.component';
 import { SecondoAComponent } from './components/secondo-a/secondo-a.component';
 import { SecondoBComponent } from './components/secondo-b/secondo-b.component';
-import { Error404Component } from './error404/error404.component';
+import { Error404Component } from './components/error404/error404.component';
 
 const routes: Route[] = [
     {

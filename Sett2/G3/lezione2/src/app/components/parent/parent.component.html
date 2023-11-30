@@ -1,5 +1,6 @@
+<h3>Sono il componente parent</h3>
 <label for="scrivi" class="me-2">Nome</label>
-<input type="text" [(ngModel)]="nome">
+<input type="text" [(ngModel)]="nome" id="campo">
 <button type="button" class="btn btn-primary ms-2" (click)="esiste = !esiste">Gestisci</button>
 <hr>
 <app-child *ngIf="esiste" [nome]="nome"></app-child>

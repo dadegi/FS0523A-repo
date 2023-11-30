@@ -1,0 +1,21 @@
+<div class="container text-center">
+    <!-- Direttiva custom di ATTRIBUTO -->
+    <h1 appColora [defaultColor]="'cyan'">Titolo</h1>
+
+    <h3>Contenuto <span appColora = "'brown'" [defaultColor]="'blue'">modificabile</span></h3>
+</div>
+
+<!-- Direttiva di modifica template -->
+<button type="button" class="btn btn-primary" (click)="active = !active">Toggle</button>
+
+<h3 *ngIf="active">{{'Riga di testo predefinita' | lowercase}}</h3>
+<h3 *appComparsa="active">{{'Riga di testo alternativa'}}</h3>
+
+<!-- <h3 *ngIf="active">Riga di testo predefinita</h3>
+<h3 *ngIf="!active">Riga di testo alternativa</h3> -->
+
+<!-- ng-template -->
+<!-- <h3 *ngIf="active; else alternativo">Riga di testo predefinita</h3>
+<ng-template #alternativo>
+    <h3>Riga di testo alternativa</h3>
+</ng-template> -->

@@ -31,7 +31,7 @@ const routes: Route[] = [
         ActivePostsComponent,
         InactivePostsComponent,
         NavbarComponent,
-        PostCardComponent,
+        PostCardComponent
     ],
     imports: [BrowserModule, RouterModule.forRoot(routes)],
     providers: [],

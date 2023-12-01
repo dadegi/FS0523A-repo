@@ -1,0 +1,15 @@
+<div>
+    <ng-container *ngIf="todos; else alternativo">
+        <div *ngIf="todos.length > 0; else noTodo">
+            <div *ngFor="let todo of todos, let i = index" class="d-flex justify-content-center mt-2">
+                <h5>- {{todo.title}}</h5>
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #alternativo>
+        <h5>Recupero task...</h5>
+    </ng-template>
+    <ng-template #noTodo>
+        <h5>Ops, non ci sono todo completati</h5>
+    </ng-template>
+</div>

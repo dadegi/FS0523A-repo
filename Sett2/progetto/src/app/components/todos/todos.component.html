@@ -1,0 +1,21 @@
+<div>
+    <ng-container *ngIf="todos; else alternativo">
+        <div *ngIf="todos.length > 0; else noTodo">
+            <div *ngFor="let todo of todos, let i = index" class="d-flex justify-content-center mt-2">
+                <h5>- {{todo.title}}</h5>
+                <button type="button" class="btn btn-success btn-sm ms-2" (click)="completa(todo, i)">✅</button>
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #alternativo>
+        <h5>Recupero task...</h5>
+    </ng-template>
+    <ng-template #noTodo>
+        <h5>Ops, non ci sono todo</h5>
+    </ng-template>
+</div>
+<div class="mt-5">
+    <label for="nuovoTitolo">Nuovo Todo</label>
+    <input type="text" [(ngModel)] = "nuovoTitolo" id="nuovoTitolo" class="ms-2">
+    <button type="button" class="btn btn-primary btn-sm ms-2" (click)="aggiungi()">➕</button>
+</div>

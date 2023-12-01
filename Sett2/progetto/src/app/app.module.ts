@@ -11,15 +11,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 const routes: Route[] = [
     {
         path: '',
-        component: TodosComponent,
+        component: TodosComponent
     },
     {
         path: 'completati',
-        component: CompletatiComponent,
+        component: CompletatiComponent
     },
     {
         path: '**',
-        redirectTo: '',
+        redirectTo: ''
     },
 ];
 

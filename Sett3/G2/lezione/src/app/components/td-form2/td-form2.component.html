@@ -1,0 +1,54 @@
+<div class="container">
+    <h1 class="text-center">Template Drive Form versione 2</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <form #form="ngForm" (ngSubmit)="submit()">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username"
+                            class="form-control" required
+                            [(ngModel)]="user.username" #username="ngModel">
+                        <p *ngIf="username.invalid && username.touched">
+                            <strong>Questo campo è obbligatorio</strong>
+                        </p>
+                        <button type="button" class="btn btn-outline-info mt-2"
+                            (click)="generaUser(form)">Genera User</button>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email"
+                                class="form-control" required
+                                [(ngModel)]="user.email" #email="ngModel">
+                            <p *ngIf="email.invalid && email.touched">
+                                <strong>Questo campo è obbligatorio, deve essere
+                                    una email valida</strong>
+                            </p>
+                        </div>
+                        <label for="secret">Domanda segreta</label>
+                        <select id="secret" name="secret" class="form-select"
+                            [(ngModel)]="user.secret">
+                            <option value=""></option>
+                            <option value="nomePadre">Nome di battesimo di tuo padre
+                            </option>
+                            <option value="nomeMadre">Nome di battesimo di tua madre
+                            </option>
+                        </select>
+                        <textarea id="risposta" name="risposta" rows="2"
+                            class="form-control"
+                            [(ngModel)]="user.risposta"></textarea>
+                        <div class="radio" *ngFor="let genere of generi">
+                            <input type="radio" name="genere"
+                                id="{{genere.label}}" required ngModel
+                                [value]="genere.value"
+                                [(ngModel)]="user.genere">
+                            <label
+                                for="{{genere.label}}">{{genere.label}}</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3"
+                            [disabled]="form.invalid">Registra</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

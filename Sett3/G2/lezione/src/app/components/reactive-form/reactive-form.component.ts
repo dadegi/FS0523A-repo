@@ -30,10 +30,7 @@ export class ReactiveFormComponent implements OnInit {
     ngOnInit(): void {
         this.form = this.fb.group({
             userInfo: this.fb.group({
-                username: this.fb.control(null, [
-                    Validators.required,
-                    this.validUsername,
-                ]),
+                username: this.fb.control(null, { validators: [Validators.required, this.validUsername] }),
                 email: this.fb.control(null, [
                     Validators.required,
                     Validators.email,

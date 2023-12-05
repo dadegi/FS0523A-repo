@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import {
+    FormBuilder,
+    FormGroup,
+    FormControl,
+    Validators,
+    FormArray,
+} from '@angular/forms';
 
 @Component({
     selector: 'app-reactive-form',
@@ -7,7 +13,6 @@ import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@ang
     styleUrls: ['./reactive-form.component.scss'],
 })
 export class ReactiveFormComponent implements OnInit {
-
     form!: FormGroup;
     generi = ['uomo', 'donna'];
     userProibiti = ['Pippo', 'Pluto'];
@@ -16,20 +21,26 @@ export class ReactiveFormComponent implements OnInit {
 
     validUsername = (formC: FormControl) => {
         if (this.userProibiti.includes(formC.value)) {
-            return {'usernameProibito': true};
+            return { usernameProibito: true };
         } else {
             return null;
         }
-    }
+    };
 
     ngOnInit(): void {
         this.form = this.fb.group({
             userInfo: this.fb.group({
-                username: this.fb.control(null, [Validators.required, this.validUsername]),
-                email: this.fb.control(null, [Validators.required, Validators.email])
+                username: this.fb.control(null, [
+                    Validators.required,
+                    this.validUsername,
+                ]),
+                email: this.fb.control(null, [
+                    Validators.required,
+                    Validators.email,
+                ]),
             }),
             genere: this.fb.control('donna'),
-            sports: this.fb.array([])
+            sports: this.fb.array([]),
         });
     }
 

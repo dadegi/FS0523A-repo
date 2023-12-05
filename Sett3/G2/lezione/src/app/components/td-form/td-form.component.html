@@ -1,0 +1,66 @@
+<div class="container">
+    <h1 class="text-center">Template Driven Form</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <form #form="ngForm" (ngSubmit)="submit()">
+                        <div ngModelGroup="userInfo" id="userInfo"
+                            #userGroup="ngModelGroup">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" id="username"
+                                    [ngModel]="userForm.defUserName"
+                                    name="username" class="form-control"
+                                    required #username="ngModel">
+                                <p *ngIf="username.invalid && username.touched">
+                                    <strong>Questo campo è obbligatorio</strong>
+                                </p>
+                            </div>
+                            <button type="button"
+                                class="btn btn-outline-info mt-1"
+                                (click)="generaUser()">Genera User</button>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email"
+                                    required [ngModel]="userForm.email"
+                                    class="form-control">
+                            </div>
+                            <p *ngIf="userGroup.invalid && userGroup.touched">
+                                Errore: i campi non sono compilati correttamente
+                            </p>
+                            <div class="form-group">
+                                <label for="secret">Domanda segreta</label>
+                                <select id="secret" name="secret"
+                                    class="form-select"
+                                    [ngModel]="userForm.question">
+                                    <option value=""></option>
+                                    <option value="padre">Nome di battesimo di
+                                        tuo padre</option>
+                                    <option value="madre">Nome di battesimo di
+                                        tua madre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="risposta" id="risposta" rows="2"
+                                    class="form-control"
+                                    [(ngModel)]="risposta"></textarea>
+                            </div>
+                            <p>La tua risposta è {{ risposta }}</p>
+                            <div class="radio" *ngFor="let genere of generi">
+                                <label>
+                                    <input type="radio" name="genere"
+                                        id="{{genere.label}}" ngModel
+                                        [value]="genere.value"
+                                        required>{{genere.label}}
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3"
+                                [disabled]="form.invalid">Registra</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,23 +1,52 @@
 {
-    "users": [],
-    "prodotti": [
-        {
-            "id": 1,
-            "codice": "A001",
-            "nomeProdotto": "olio",
-            "prezzo": 6
-        },
-        {
-            "id": 2,
-            "codice": "A003",
-            "nomeProdotto": "pasta",
-            "prezzo": 1
-        },
-        {
-            "id": 3,
-            "codice": "A003",
-            "nomeProdotto": "vino",
-            "prezzo": 5
-        }
-    ]
+  "users": [
+    {
+      "email": "alessio@rocchigiani.com",
+      "password": "$2a$10$bQHRQfuYXlBj4l5PxNRgy.UBi08xWD4mYoK.6cgJ5ucBKbJr4B0xq",
+      "nome": "Alessio",
+      "cognome": "Rocchigiani",
+      "id": 1
+    },
+    {
+      "email": "chiara@puleio.com",
+      "password": "$2a$10$h/GRMYv5nXtQp/55ueple.f78Dwye5DYPdyzz5d6.Y0c6xFngIG.G",
+      "nome": "Chiara",
+      "cognome": "Puleio",
+      "id": 2
+    },
+    {
+      "email": "dadegi@gmail.com",
+      "password": "$2a$10$xqmvJIR/HSTxBMb8q9ic3.rSQ7G8.yq0J4jfyd8y32Cf.y4iYWj/6",
+      "nome": "Dario",
+      "cognome": "Del Giudice",
+      "id": 3
+    },
+    {
+      "email": "gianni@cabiddu.com",
+      "password": "$2a$10$tcH51HQ48N.CgpRpfcvczOLUzz2vaf.ZJU2Bpjd.Pb.XUc9kmpGgO",
+      "nome": "Gianni",
+      "cognome": "Cabiddu",
+      "id": 4
+    }
+  ],
+  "prodotti": [
+    {
+      "id": 1,
+      "codice": "A001",
+      "nomeProdotto": "olio",
+      "prezzo": 6
+    },
+    {
+      "id": 2,
+      "codice": "A003",
+      "nomeProdotto": "pasta",
+      "prezzo": 1
+    },
+    {
+      "id": 3,
+      "codice": "A003",
+      "nomeProdotto": "vino",
+      "prezzo": 5
+    }
+  ]
 }

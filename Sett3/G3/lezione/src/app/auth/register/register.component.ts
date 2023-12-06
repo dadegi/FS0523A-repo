@@ -17,13 +17,10 @@ export class RegisterComponent implements OnInit {
         console.log(form.value);
         try {
             this.authSrv.register(form.value).subscribe();
-            this.router.navigate(['/login']);
         } catch (error: any) {
             console.log(error);
-            if (error.status == 400) {
-                alert('Email già registrata!');
-                this.router.navigate(['/register']);
-            }
+            alert(error);
+            this.router.navigate(['/register']);
         }
     }
 }

@@ -23,7 +23,6 @@ export class TokenInterceptor implements HttpInterceptor {
             take(1),
             switchMap(utente => {
                 if (!utente) {
-                    console.log(request);
                     return next.handle(request);
                 }
 

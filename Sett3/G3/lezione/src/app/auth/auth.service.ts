@@ -22,11 +22,12 @@ export class AuthService {
     login(data: { email: string; password: string }) {
         return this.http.post<AuthData>(`${this.apiURL}/login`, data).pipe(
             tap((loggato) => {
-                console.log(loggato);
+                // console.log(loggato);
                 this.authSubj.next(loggato);
                 this.utente = loggato;
-                console.log(this.utente);
+                // console.log(this.utente);
                 localStorage.setItem('user', JSON.stringify(loggato));
+                console.log(this.user$);
                 alert('Login effettuato');
                 this.router.navigate(['/']);
             }),
@@ -38,10 +39,12 @@ export class AuthService {
         // Utilizzato nel caso in cui l'utente abbandoni l'applicazione senza fare logout; se rientra e il token è ancora valido, non dovrà rifare login
         const user = localStorage.getItem('user');
         if (!user) {
+            this.router.navigate(['/login']);
             return;
         }
         const userData: AuthData = JSON.parse(user);
         if (this.jwtHelper.isTokenExpired(userData.accessToken)) {
+            this.router.navigate(['/login']);
             return;
         }
         this.authSubj.next(userData); // Rientrando nell'applicazione dopo essere usciti, il BehaviourSubject è di nuovo null: in questo modo riceve i valori presenti nel localStorage e comunica di nuovo a user$ la presenza dell'utente

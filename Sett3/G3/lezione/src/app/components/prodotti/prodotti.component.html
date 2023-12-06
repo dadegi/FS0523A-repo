@@ -1,1 +1,21 @@
-<p>prodotti works!</p>
+<h1 class="text-center">I nostri prodotti</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col-2">
+            <a class="btn btn-success mb-3" [routerLink]="['/nuovoProdotto']">Inserisci nuovo prodotto</a>
+        </div>
+        <div class="col-5"></div>
+    </div>
+    <div class=" row">
+        <div class="col-12">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let prodotto of prodotti">
+                    Codice prodotto: {{prodotto.codice}}<br>
+                    Nome prodotto: {{prodotto.nomeProdotto}}<br>
+                    Prezzo: &euro; {{prodotto.prezzo}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

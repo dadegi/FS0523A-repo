@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
     styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
+
     constructor(private authSrv: AuthService, private router: Router) {}
 
     ngOnInit(): void {}

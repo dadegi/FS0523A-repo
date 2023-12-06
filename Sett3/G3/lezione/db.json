@@ -47,6 +47,12 @@
       "codice": "A003",
       "nomeProdotto": "vino",
       "prezzo": 5
+    },
+    {
+      "codice": "A004",
+      "nomeProdotto": "Acqua minerale",
+      "prezzo": "0.80",
+      "id": 4
     }
   ]
 }

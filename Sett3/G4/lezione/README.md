@@ -1,15 +1,5 @@
 # Lezione
 
-Questo progetto è generato utilizzando json-server, json-server-auth, concurrently e angular jwt.abs
-Per provarlo, seguire i seguenti passaggi:
-
-1. installare con npm i: json-server, json-server-auth, concurrently, @auth0/angular-jwt
-2. modificare il package json inserendo le seguenti righe:
-    - "backend": "json-server-auth --watch db.json --port 4201",
-    - "fullstack": "concurrently \"npm run backend\" \"npm run start\""
-3. creare a livello di sistema (allo stesso livello del package.json) un file db.json con all'interno il seguente oggetto:
-    - {"user": []}
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
 ## Development server
